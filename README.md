@@ -9,4 +9,4 @@
 - then, use **config** as you would use **git** (add, status, commit, push...)
 
 
-** Note **: for git hooks usage need to have autopep8 installed
+**Note**: for git hooks usage need to have autopep8 installed
