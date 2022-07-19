@@ -1,25 +1,17 @@
 set number 
 set nowrap	
-set showmatch
+set showmatch	" matching parenthesis
 
 set colorcolumn=80
 set textwidth=79
 
+" deactivate bell
 set visualbell 
 set t_vb=
 
 set hlsearch
 set smartcase
 set incsearch
-
-filetype indent on
-set autoindent
-set noexpandtab
-set shiftwidth=4
-"set smartindent
-"set smarttab
-set tabstop=4
-set softtabstop=4
 
 set undolevels=1000
 set backspace=indent,eol,start
@@ -48,4 +40,10 @@ augroup remember_folds
 augroup END
 
 let g:tex_flavor='latex'
+
+" filetype indent on
+" set autoindent
+set shiftwidth=4
+set tabstop=4
+set expandtab
 
