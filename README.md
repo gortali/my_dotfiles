@@ -8,5 +8,5 @@
 - **download**: config checkout 
 - then, use **config** as you would use **git** (add, status, commit, push...)
 
-
+**Note**: uncomment out "source .bashrc.post1" from .bashrc if needed
 **Note**: for git hooks usage need to have autopep8 installed
