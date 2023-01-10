@@ -1,0 +1,26 @@
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/data/storage8/gortali/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/data/storage8/gortali/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/data/storage8/gortali/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/data/storage8/gortali/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# change dir where screen are saved
+export SCREENDIR=/data/storage8/gortali/screen
+
+ # change vim 
+export PATH=/data/storage8/gortali/bin:$PATH
+alias vi="vim"
+alias vim="/data/storage8/gortali/bin/vim"
+
+cd /data/storage8/gortali/
+
+
