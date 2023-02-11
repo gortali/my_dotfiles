@@ -1,0 +1,12 @@
+[submodule ".vim/pack/vendor/start/ale"]
+	path = .vim/pack/vendor/start/ale
+	url = https://github.com/dense-analysis/ale
+[submodule ".vim/pack/vendor/start/nerdtree"]
+	path = .vim/pack/vendor/start/nerdtree
+	url = https://github.com/preservim/nerdtree
+[submodule ".vim/pack/vendor/start/nerdtree-buffer-ops"]
+	path = .vim/pack/vendor/start/nerdtree-buffer-ops
+	url = https://github.com/PhilRunninger/nerdtree-buffer-ops
+[submodule ".vim/pack/vendor/start/vim-anyfold"]
+	path = .vim/pack/vendor/start/vim-anyfold
+	url = https://github.com/pseewald/vim-anyfold

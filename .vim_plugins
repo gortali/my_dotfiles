@@ -1,6 +1,0 @@
-git clone under.vim/pack/vendor/start
-
-ale: https://www.google.com/search?client=firefox-b-d&q=vim+ale 
-nerdtree: https://github.com/preservim/nerdtree
-    nerdtree-buffer-ops: https://github.com/PhilRunninger/nerdtree-buffer-ops
-vim-anyfold: https://github.com/pseewald/vim-anyfold
