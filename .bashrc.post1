@@ -17,10 +17,13 @@ unset __conda_setup
 export SCREENDIR=/data/storage8/gortali/screen
 
  # change vim 
-export PATH=/data/storage8/gortali/bin:$PATH
+#export PATH=/data/storage8/gortali/bin:$PATH
+export PATH=/home/gortali/bin:$PATH
 alias vi="vim"
-alias vim="/data/storage8/gortali/bin/vim"
+alias vim="/home/gortali/bin/vim"
 
 cd /data/storage8/gortali/
+
+export JAX_ENABLE_X64=True
 
 

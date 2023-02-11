@@ -57,10 +57,11 @@ set undodir=/data/storage8/gortali/.vim/undo
 "number of undo saved
 set undolevels=10000 
 
-
+"autocmd VimEnter * NERDTree
+nmap <F6> :NERDTreeToggle<CR>
+let g:NERDTreeWinPos = "right"
 
 "" for folding 
-"nnoremap <space> za 
 "set foldmethod=indent
 "set foldlevel=99
 "augroup remember_folds
@@ -68,4 +69,23 @@ set undolevels=10000
 "  autocmd BufWinLeave * mkview
 "  autocmd BufWinEnter * silent! loadview
 "augroup END
+filetype plugin indent on " required
+autocmd Filetype * AnyFoldActivate               " activate for all filetypes
+"set foldlevel=0  " close all folds
+set foldlevel=99 " Open all folds
+nnoremap <space> za 
 
+
+let g:ale_lint_on_enter = 1
+let g:ale_lint_on_save = 1
+let g:ale_linters={'python': ['pylint'],}
+let g:ale_python_pylint_options = '--errors-only'
+"let g:ale_fixers = {
+"            \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+"            \   'python': ['black'],
+"            \}
+"let g:ale_completion_enabled = 1
+"set omnifunc=ale#completion#OmniFunc
+let g:ale_enabled = 1
+
+nmap <F7> :ALEToggle<CR>
