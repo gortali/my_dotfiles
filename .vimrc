@@ -60,6 +60,7 @@ set undolevels=10000
 "autocmd VimEnter * NERDTree
 nmap <F6> :NERDTreeToggle<CR>
 let g:NERDTreeWinPos = "right"
+let NERDTreeShowHidden=1
 
 "" for folding 
 "set foldmethod=indent
