@@ -1,0 +1,5 @@
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/gortali/.profile
+echo 'eval "$(/usr/local/bin/brew shellenv)"' >> /Users/gortali/.profile
+eval "$(/usr/local/bin/brew shellenv)"
+
+export PATH="/Library/Tex/texbin/:$PATH"
