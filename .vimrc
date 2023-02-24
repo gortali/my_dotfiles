@@ -31,6 +31,12 @@ set undolevels=1000
 set wildmenu
 set wildmode=full
 
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
+
+
 "au BufRead,BufNewFile *.gp set filetype=gnuplot
 "autocmd BufRead,BufNewFile *.py let python_highlight_all=1
 autocmd FileType bash map <buffer> <F5> :w<CR>:exec shellescape(@%, 1)<CR>
