@@ -32,10 +32,8 @@ set wildmenu
 set wildmode=full
 
 "reopen file at last line
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal! g'\"" | endif
-endif
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview 
 
 
 "au BufRead,BufNewFile *.gp set filetype=gnuplot
