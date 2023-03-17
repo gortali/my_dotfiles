@@ -10,3 +10,5 @@
 - then, use **config** as you would use **git** (add, status, commit, push...)
 
 **Note**: uncomment out "source .bashrc.post1", "source .bashrc.mac" from .bashrc if needed
+
+to add new submodules: config submodule add <URL> .vim/pack/vendor/start/<NAME>
