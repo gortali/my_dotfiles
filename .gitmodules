@@ -10,3 +10,6 @@
 [submodule ".vim/pack/vendor/start/vim-anyfold"]
 	path = .vim/pack/vendor/start/vim-anyfold
 	url = https://github.com/pseewald/vim-anyfold
+[submodule ".vim/pack/vendor/start/chatgpt-vim"]
+	path = .vim/pack/vendor/start/chatgpt-vim
+	url = https://github.com/0xStabby/chatgpt-vim.git
