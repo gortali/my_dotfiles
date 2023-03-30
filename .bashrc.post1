@@ -1,20 +1,36 @@
+#### >>> conda initialize >>>
+#### !! Contents within this block are managed by 'conda init' !!
+###__conda_setup="$('/data/storage8/gortali/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+###if [ $? -eq 0 ]; then
+###    eval "$__conda_setup"
+###else
+###    if [ -f "/data/storage8/gortali/anaconda3/etc/profile.d/conda.sh" ]; then
+###        . "/data/storage8/gortali/anaconda3/etc/profile.d/conda.sh"
+###    else
+###        export PATH="/data/storage8/gortali/anaconda3/bin:$PATH"
+###    fi
+###fi
+###unset __conda_setup
+#### <<< conda initialize <<<
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/data/storage8/gortali/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/data/storage4/gortali/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/data/storage8/gortali/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/data/storage8/gortali/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/data/storage4/gortali/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/data/storage4/gortali/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/data/storage8/gortali/anaconda3/bin:$PATH"
+        export PATH="/data/storage4/gortali/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
 # change dir where screen are saved
-export SCREENDIR=/data/storage8/gortali/screen
+export SCREENDIR=/data/storage4/gortali/screen
+#export SCREENDIR=/data/storage8/gortali/screen
 
  # change vim 
 #export PATH=/data/storage8/gortali/bin:$PATH
@@ -22,8 +38,13 @@ export PATH=/home/gortali/bin:$PATH
 alias vi="vim"
 alias vim="/home/gortali/bin/vim"
 
+alias nvidia-smi="watch -n 1 --color '/data/storage8/gortali/nvidia-htop/nvidia-htop.py -c'"
+alias nvim='/data/storage4/gortali/squashfs-root/AppRun'
+
 cd /data/storage8/gortali/
 
 export JAX_ENABLE_X64=True
 
-
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

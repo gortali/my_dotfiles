@@ -87,10 +87,10 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-alias nvidia-smi="watch -n 1 --color '/data/storage8/gortali/nvidia-htop/nvidia-htop.py -c'"
 
 #for dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -110,5 +110,4 @@ fi
 
 source ~/.bashrc.post1
 #source ~/.bashrc.mac
-
 
