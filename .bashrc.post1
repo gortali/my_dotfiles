@@ -36,7 +36,8 @@ export SCREENDIR=/data/storage4/gortali/screen
 #export PATH=/data/storage8/gortali/bin:$PATH
 export PATH=/home/gortali/bin:$PATH
 alias vi="vim"
-alias vim="/home/gortali/bin/vim"
+#alias vim="/home/gortali/bin/vim"
+alias vim="nvim"
 
 alias nvidia-smi="watch -n 1 --color '/data/storage8/gortali/nvidia-htop/nvidia-htop.py -c'"
 alias nvim='/data/storage4/gortali/squashfs-root/AppRun'
