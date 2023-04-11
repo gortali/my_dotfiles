@@ -1,5 +1,6 @@
 set nocompatible
 
+set cursorline
 set confirm
 set hidden "do not close buff when changing
 set backspace=indent,eol,start
@@ -98,4 +99,4 @@ imap <silent> <C-w> <Plug>(copilot-next)
 imap <silent> <C-q> <Plug>(copilot-previous)
 imap <silent> <C-e> <Plug>(copilot-dismiss)
 
-let g:slime_target = "neovim"
+let g:slime_target = "screen"
