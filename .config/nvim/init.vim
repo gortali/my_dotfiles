@@ -1,5 +1,6 @@
 set nocompatible
 
+set noswapfile
 set cursorline
 set confirm
 set hidden "do not close buff when changing
@@ -64,8 +65,11 @@ set undolevels=10000 "number of undo saved
 set splitright
 set splitbelow
 
-command! -nargs=* Terminal split | terminal python3
-command! -nargs=* VTerminal vsplit | terminal python3
+command! -nargs=* Terminal split | terminal 
+"python3
+command! -nargs=* VTerminal vsplit | terminal 
+"python3
+nmap <F3> :Terminal<CR>
 nmap <F4> :VTerminal<CR>
 :tnoremap <Esc> <C-\><C-n> 
 
@@ -99,4 +103,5 @@ imap <silent> <C-w> <Plug>(copilot-next)
 imap <silent> <C-q> <Plug>(copilot-previous)
 imap <silent> <C-e> <Plug>(copilot-dismiss)
 
-let g:slime_target = "screen"
+let g:slime_target = "dtach"
+let g:slime_default_config = {"socket_path": "/data/storage4/gortali/dtach/"}
