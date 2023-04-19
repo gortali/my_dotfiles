@@ -40,17 +40,14 @@ alias vi="vim"
 alias vim="nvim"
 alias nvim='/data/storage4/gortali/squashfs-root/AppRun'
 
-alias nvidia-smi="watch -n 1 --color '/data/storage8/gortali/nvidia-htop/nvidia-htop.py -c'"
-
-cd /data/storage8/gortali/
-
-export JAX_ENABLE_X64=True
+alias nvidia-smi="watch -n 1 nvidia-htop.py"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-my_dtach() {
+mydtach() {
     dtach -A /data/storage4/gortali/dtach/$1 -e '^A' -z python3
 }
-alias dtach="my_dtach"
+
+cd /data/storage8/gortali/
