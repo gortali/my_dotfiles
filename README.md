@@ -15,3 +15,4 @@ Additional steps:
   - git config --global user.email "gortali12@gmail.com"
   - git config --global user.name "Giulio Ortali"
   - ... config push --set-upstream origin master
+  - **install vim-plug**: https://github.com/junegunn/vim-plug
