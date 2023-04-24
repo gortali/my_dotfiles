@@ -1,5 +1,6 @@
 set nocompatible
 
+set mouse=
 set noswapfile
 set cursorline
 set confirm
@@ -65,19 +66,20 @@ set undolevels=10000 "number of undo saved
 set splitright
 set splitbelow
 
-command! -nargs=* Terminal split | terminal 
-"python3
-command! -nargs=* VTerminal vsplit | terminal 
-"python3
-nmap <F3> :Terminal<CR>
-nmap <F4> :VTerminal<CR>
+""command! -nargs=* Terminal split | terminal 
+"""python3
+""command! -nargs=* VTerminal vsplit | terminal 
+"""python3
+""nmap <F3> :Terminal<CR>
+""nmap <F4> :VTerminal<CR>
 :tnoremap <Esc> <C-\><C-n> 
 
 call plug#begin()
     Plug 'dense-analysis/ale'
     Plug 'preservim/nerdtree'
     Plug 'github/copilot.vim'
-    Plug 'jpalardy/vim-slime'
+    Plug 'tpope/vim-repeat'
+    Plug 'pappasam/nvim-repl'
 call plug#end()
 
 "autocmd VimEnter * NERDTree
@@ -103,5 +105,14 @@ imap <silent> <C-w> <Plug>(copilot-next)
 imap <silent> <C-q> <Plug>(copilot-previous)
 imap <silent> <C-e> <Plug>(copilot-dismiss)
 
-let g:slime_target = "dtach"
-let g:slime_default_config = {"socket_path": "/data/storage4/gortali/dtach/"}
+"let g:slime_target = "dtach"
+"let g:slime_default_config = {"socket_path": "/data/storage4/gortali/dtach/"}
+
+let g:repl_filetype_commands = {                                                                   
+    \ 'python': 'ipython3',                                                     
+    \ }  
+let g:repl_split_direction = 'vertical'
+nmap <F4> :ReplToggle<CR>
+nnoremap <C-c> :ReplRunCell<CR>
+
+

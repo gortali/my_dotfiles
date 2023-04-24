@@ -108,4 +108,4 @@ fi
 
 #source ~/.bashrc.post1
 #source ~/.bashrc.mac
-
+source ~/.bashrc.thinkp
