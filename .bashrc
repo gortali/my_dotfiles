@@ -106,6 +106,13 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-#source ~/.bashrc.post1
+function swap()         
+{
+    local TMPFILE=tmp.$$
+    mv "$1" $TMPFILE && mv "$2" "$1" && mv $TMPFILE "$2"
+}
+
+source ~/.bashrc.post1
 #source ~/.bashrc.mac
-source ~/.bashrc.thinkp
+#source ~/.bashrc.thinkp
+
