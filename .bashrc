@@ -72,7 +72,7 @@ term_colors() {
 if [ "$color_prompt" = yes ]; then
   term_colors
 else
-    PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\ \${prompt_job}\$ "
+    PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\$ "
 fi
 unset color_prompt force_color_prompt
 #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
@@ -127,6 +127,7 @@ function mydtach() {
 
 
 source ~/.bashrc.post1
+#source ~/.bashrc.ipad
 #source ~/.bashrc.mac
 #source ~/.bashrc.thinkp
 
