@@ -15,7 +15,6 @@ set visualbell
 
 set showmatch "show matching parenthesis
 set hlsearch "highlight searching pattern
-
 set smartcase
 set incsearch
 
@@ -29,17 +28,15 @@ set smartindent
 set smarttab
 set tabstop=4
 set softtabstop=4
-
 set undolevels=1000
-
 set wildmenu
 set wildmode=full
 
-"reopen file at last line
-"autocmd BufWinLeave *.* mkview
-"autocmd BufWinEnter *.* silent loadview 
+set splitright
+set splitbelow
 
-"au BufRead,BufNewFile *.gp set filetype=gnuplot
+"
+au BufRead,BufNewFile *.gp set filetype=gnuplot
 "autocmd BufRead,BufNewFile *.py let python_highlight_all=1
 autocmd FileType bash map <buffer> <F5> :w<CR>:exec shellescape(@%, 1)<CR>
 autocmd FileType python map <buffer> <F5> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
@@ -54,32 +51,13 @@ nnoremap <C-Up> <C-W><C-K>
 nnoremap <C-Right> <C-W><C-L>
 nnoremap <C-Left> <C-W><C-H>
 
-"half up or down
-nnoremap <S-Up> <C-u>
-nnoremap <S-Down> <C-d>
-
-"save undo trees in files
-"set undofile
-"set undodir=/data/storage8/gortali/.vim/undo
-set undolevels=10000 "number of undo saved
-
-set splitright
-set splitbelow
-
-""command! -nargs=* Terminal split | terminal 
-"""python3
-""command! -nargs=* VTerminal vsplit | terminal 
-"""python3
-""nmap <F3> :Terminal<CR>
-""nmap <F4> :VTerminal<CR>
-:tnoremap <Esc> <C-\><C-n> 
-
 call plug#begin()
     Plug 'dense-analysis/ale'
     Plug 'preservim/nerdtree'
+    Plug 'farmergreg/vim-lastplace'
     Plug 'github/copilot.vim'
+"    Plug 'untitled-ai/jupyter_ascending.vim'
     Plug 'tpope/vim-repeat'
-    Plug 'pappasam/nvim-repl'
 call plug#end()
 
 "autocmd VimEnter * NERDTree
@@ -98,21 +76,11 @@ let g:ale_python_pylint_options = '--errors-only'
 "let g:ale_completion_enabled = 1
 "set omnifunc=ale#completion#OmniFunc
 let g:ale_enabled = 1
-
 nmap <F7> :ALEToggle<CR>
 
 imap <silent> <C-w> <Plug>(copilot-next)
 imap <silent> <C-q> <Plug>(copilot-previous)
 imap <silent> <C-e> <Plug>(copilot-dismiss)
 
-"let g:slime_target = "dtach"
-"let g:slime_default_config = {"socket_path": "/data/storage4/gortali/dtach/"}
-
-let g:repl_filetype_commands = {                                                                   
-    \ 'python': 'ipython3',                                                     
-    \ }  
-let g:repl_split_direction = 'vertical'
-nmap <F4> :ReplToggle<CR>
-nnoremap <C-c> :ReplRunCell<CR>
-
-
+lua << EOF
+EOF
