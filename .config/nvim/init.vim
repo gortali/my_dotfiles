@@ -15,8 +15,9 @@ set visualbell
 
 set showmatch "show matching parenthesis
 set hlsearch "highlight searching pattern
-set smartcase
 set incsearch
+set ignorecase
+set smartcase "ignore case if pattern is lowercase
 
 syntax on
 filetype indent on
