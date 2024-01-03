@@ -118,11 +118,9 @@ function swap()
     mv "$1" $TMPFILE && mv "$2" "$1" && mv $TMPFILE "$2"
 }
 
-function mydtach() {
-  session_name="$1"
-  shift
-  logfile="${session_name}.log.$(date +%Y%m%d%H%M%S)"
-  dtach -n "${session_name}" "$@" |& tee "${logfile}"
+#define fn that returns this string: $(date +%Y%m%d%H%M%S)
+function now() {
+    date +%Y%m%d%H%M%S
 }
 
 
