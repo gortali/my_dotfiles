@@ -41,6 +41,8 @@ set splitbelow
 command Z w | qa
 cabbrev wqa Z
 
+let g:python3_host_prog = '/usr/bin/python3'
+
 "
 au BufRead,BufNewFile *.gp set filetype=gnuplot
 autocmd BufRead,BufNewFile *.py let python_highlight_all=1
@@ -65,9 +67,6 @@ call plug#begin()
     Plug 'preservim/nerdtree'
     Plug 'farmergreg/vim-lastplace'
     Plug 'github/copilot.vim'
-"    Plug 'untitled-ai/jupyter_ascending.vim'
-    Plug 'pappasam/nvim-repl'
-    Plug 'tpope/vim-repeat'
 call plug#end()
 
 "autocmd VimEnter * NERDTree
